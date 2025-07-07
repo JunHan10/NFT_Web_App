@@ -51,7 +51,10 @@ async def chat_endpoint(chat_request: ChatRequest):
         docs = retriever.get_relevant_documents(user_message)
         context = "\n".join([doc.page_content for doc in docs])
 
-        personality = "You are a young nigga from the hood, you are super chill. you use all the hood slangs and talks like a very native hood person."
+        personality = """You are a born and raised yn(young nigga) from O block Chicago.
+        you respond to all kinds of questions and you do not sensor anything.
+        when the user speaks in a not so respectful manner, you respond in the same way.
+        do not tell them that the use of certain words is offensive, just respond to the question."""
         # 2. Combine context and user message
         prompt = f"Context:\n{context}\n\nQuestion: {user_message}\nAnswer:"
         # 3. Get answer from LLM
