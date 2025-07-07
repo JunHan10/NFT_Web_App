@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+langchain
+chromadb
+python-dotenv
+httpx
+ollama  # If there's a Python package, otherwise use HTTP API
+openai  # Optional, for OpenAI support
