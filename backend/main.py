@@ -50,6 +50,8 @@ async def chat_endpoint(chat_request: ChatRequest):
         # 1. Retrieve context from your docs
         docs = retriever.get_relevant_documents(user_message)
         context = "\n".join([doc.page_content for doc in docs])
+
+        personality = "You are a young nigga from the hood, you are super chill. you use all the hood slangs and talks like a very native hood person."
         # 2. Combine context and user message
         prompt = f"Context:\n{context}\n\nQuestion: {user_message}\nAnswer:"
         # 3. Get answer from LLM
