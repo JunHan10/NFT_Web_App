@@ -12,7 +12,7 @@ app = FastAPI()
 # Allow CORS for local frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["https://shiny-douhua-1a10a9.netlify.app"],  # your Netlify URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
