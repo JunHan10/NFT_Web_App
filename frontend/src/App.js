@@ -92,7 +92,8 @@ function ChatbotWidget() {
     setInput('');
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:8000/chat', {
+      const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+      const res = await fetch(`${apiUrl}/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: input })
